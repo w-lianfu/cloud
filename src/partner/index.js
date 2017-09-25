@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
-class Solution extends Component {
+class Partner extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div>
-        <p>Solution Page...</p>
-      </div>
+      <div>合作与生态...</div>
     )
   }
 }
 
-export default Solution
+export default Partner

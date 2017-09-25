@@ -1,0 +1,29 @@
+@import '../scss/color.scss';
+
+.header {
+  height: 46px;
+  background-color: $c222;
+  
+  nav {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      color: #fff;
+      box-sizing: border-box;
+      padding: 0 15px;
+      border-bottom: 3px solid $ca222;
+      border-top: 3px solid $ca222;
+      font-weight: bold;
+      
+      &:hover {
+        color: $mainRed;
+        border-bottom: 3px solid red;
+      }
+    }
+  }
+}

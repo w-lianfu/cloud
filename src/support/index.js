@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
-class Solution extends Component {
+class Support extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div>
-        <p>Solution Page...</p>
-      </div>
+      <div>支持与服务...</div>
     )
   }
 }
 
-export default Solution
+export default Support

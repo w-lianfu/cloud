@@ -1,13 +1,15 @@
-var webpack = require('webpack')
-var path = require('path')
+let webpack = require('webpack')
+let path = require('path')
+let ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var config = {
+
+let config = {
   entry: {
     app: path.resolve(__dirname, './src/index.js')
   },
   output: {
     path: path.resolve(__dirname, './public'),
-    filename: '[name].js'
+    filename: 'style.css'
   },
   module: {
     rules: [
@@ -18,7 +20,6 @@ var config = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           'style-loader',
           {
@@ -33,24 +34,31 @@ var config = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader',
-          'sass-loader'
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1
+              }
+            },
+            'postcss-loader',
+            'sass-loader'
+          ]
+        })
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=.+)?$/,
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'style.css'
+    })
+  ]
 }
 
 module.exports = config

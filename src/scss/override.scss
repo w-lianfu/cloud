@@ -1,0 +1,6 @@
+@import './color.scss';
+
+::selection {
+  background-color: $c333;
+  color: $white;
+}

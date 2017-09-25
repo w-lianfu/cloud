@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
-class Solution extends Component {
+class Activity extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div>
-        <p>Solution Page...</p>
-      </div>
+      <div>最新活动页面...</div>
     )
   }
 }
 
-export default Solution
+export default Activity
