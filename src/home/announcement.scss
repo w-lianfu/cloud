@@ -1,0 +1,46 @@
+@import '../scss/color.scss';
+@import '../scss/size.scss';
+
+.announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  background: $f7;
+
+  dl {
+    display: flex;
+    position: relative;
+    width: 1164px;
+    margin: 0;
+
+    dd {
+      width: 25%;
+      -webkit-margin-start: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-right: 30px;
+
+      a {
+        color: $c666;
+
+        &:hover {
+          color: $mainRed;
+        }
+      }
+    }
+
+    &>a {
+      color: $c666;
+      font-size: $size13;
+      position: absolute;
+      right: 0;
+
+      &:hover {
+        color: $mainRed;
+      }
+    }
+  }
+}

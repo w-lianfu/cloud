@@ -13,6 +13,8 @@ import Partner from './partner'
 import Support from './support'
 
 import 'semantic-ui-css/semantic.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './scss/override.scss'
 // import './scss/common.scss'
 

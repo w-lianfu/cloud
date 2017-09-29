@@ -1,19 +1,43 @@
 @import '../scss/color.scss';
 
 .header {
+  display: flex;
   height: 46px;
   background-color: $c222;
+
+  dl.nav-left {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+
+    dd {
+      margin: 0;
+      height: 24px;
+      color: $white;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+
+      a {
+        height: 100%;
+        display: inline-block;
+      }
+    }
+  }
   
   nav {
     display: inline-flex;
     align-items: center;
     height: 100%;
+    margin-left: 20px;
 
     a {
       display: inline-flex;
       align-items: center;
       height: 100%;
-      color: #fff;
+      color: $white;
       box-sizing: border-box;
       padding: 0 15px;
       border-bottom: 3px solid $ca222;
@@ -22,7 +46,7 @@
       
       &:hover {
         color: $mainRed;
-        border-bottom: 3px solid red;
+        border-bottom: 3px solid $mainRed;
       }
     }
   }

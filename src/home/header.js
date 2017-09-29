@@ -11,6 +11,10 @@ class Header extends Component {
   render() {
     return (
       <header className='header'>
+        <dl className='nav-left'>
+          <dd><i className='material-icons'>menu</i></dd>
+          <dd><Link to='/'><img src='/img/logo.png' /></Link></dd>
+        </dl>
         <nav>
           <Link to='/activity'>最新活动</Link>
           <Link to='/product'>产品</Link>
